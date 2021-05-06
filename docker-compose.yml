@@ -8,7 +8,7 @@ services:
     env_file:
       - .env
     ports:
-      - "5432:3080"
+      - "3080:5432"
   rabbitmq:
     image: rabbitmq:management
     env_file:
@@ -46,7 +46,7 @@ services:
   ui:
     image: cyborgbackup/cyborgbackup-ui:latest
     ports:
-      - "80:3079"
+      - "3079:80"
     restart: unless-stopped  
   celery:
     image: cyborgbackup/cyborgbackup:latest
