@@ -71,6 +71,11 @@ services:
     ports:
       - 27017:27017
 
+networks:
+  default:
+    external:
+      name: jbhs-network
+
 volumes:
   postgres_data:
   mongo_data:
