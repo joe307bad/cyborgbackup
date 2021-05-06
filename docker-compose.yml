@@ -43,6 +43,11 @@ services:
       - postgres
       - rabbitmq
     restart: unless-stopped
+  ui:
+    image: cyborgbackup/cyborgbackup-ui:latest
+    ports:
+      - "3079:80"
+    restart: unless-stopped  
   celery:
     image: cyborgbackup/cyborgbackup:latest
     command: celery -A cyborgbackup worker -E -c 1
