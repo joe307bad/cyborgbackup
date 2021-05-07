@@ -95,7 +95,8 @@ clean: clean-ui clean-dist
 	find . -type d -name "__pycache__" -delete
 
 initenv:
-	echo "POSTGRES_HOST=postgres" > .env
+	echo "POSTGRES_HOST=cyborgbackup_postgres_1" > .env
+	echo "POSTGRES_PORT=3080" > .env
 	echo "POSTGRES_PASSWORD=cyborgbackup" >> .env
 	echo "POSTGRES_USER=cyborgbackup" >> .env
 	echo "POSTGRES_NAME=cyborgbackup" >> .env
